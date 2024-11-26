@@ -1,24 +1,25 @@
 {
   "name": "@rccpr/cli",
-  "version": "1.1.16",
+  "version": "0.1.0",
   "description": "CLI project",
-  "index": "dist/index.js",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
   "bin": {
     "cli": "./cli"
   },
-  "exports": "./dist/index.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
     "start": "tsup --onSuccess 'node dist/index.js'",
     "dev": "tsup --watch --onSuccess 'node dist/index.js'",
     "lint": "eslint . -c ./src/*.ts"
   },
   "author": "Diego Garcia (Outcast50903)",
-  "license": "ISC",
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.1.0",

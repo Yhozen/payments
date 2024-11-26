@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import { Command } from "commander";
 import dotenv from "dotenv";
 import { getPackageInfo } from "@/utils";
@@ -23,4 +22,4 @@ export const main = async () => {
   program.parse();
 };
 
-main()
+main();
