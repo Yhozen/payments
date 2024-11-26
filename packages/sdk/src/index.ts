@@ -2,8 +2,9 @@ import axios, { type AxiosInstance, type AxiosRequestConfig } from "axios";
 import { SupportedCurrencies } from "./supported-currencies";
 import type { PaymentIntentOutput as _PaymentIntentOutput } from "@rccpr/core";
 import type { IsEqual } from "type-fest";
+
 type PaySdkOptions = {
-  apiURL: string;
+  apiURL?: string;
   axiosOptions?: AxiosRequestConfig;
 };
 
@@ -12,14 +13,22 @@ type PaymentIntentOutput = {
   link: string;
 };
 
-type X = IsEqual<PaymentIntentOutput, _PaymentIntentOutput>;
+{
+  type X = IsEqual<PaymentIntentOutput, _PaymentIntentOutput>;
+  // the following line should not throw any error
+  // and should be deleted at compile time (checking types only)
+  void (true satisfies X);
+}
 
 export class PaySdk {
   axios: AxiosInstance;
   constructor(options: PaySdkOptions) {
     this.axios = axios.create({
       ...(options.axiosOptions ?? {}),
-      baseURL: options.apiURL,
+      baseURL:
+        options.apiURL ??
+        process.env.PC_API_URL ??
+        "https://paymentcli.xyz/api/pay",
     });
   }
 

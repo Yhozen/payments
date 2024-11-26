@@ -12,7 +12,6 @@ export const env = createEnv({
     MP_ACCESS_TOKEN: z.string().min(1),
     STRIPE_SECRET_KEY: z.string().min(1),
     STRIPE_PUSHABLE_KEY: z.string().min(1),
-    NEXT_PAY_URL: z.string().url(),
   },
   /*
    * Environment variables available on the client (and server).
@@ -32,7 +31,6 @@ export const env = createEnv({
     DATABASE_URL: process.env.DATABASE_URL,
     MP_ACCESS_TOKEN: process.env.MP_ACCESS_TOKEN,
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
-    NEXT_PAY_URL: process.env.NEXT_PAY_URL,
     STRIPE_PUSHABLE_KEY: process.env.STRIPE_PUSHABLE_KEY,
   },
 });

@@ -1,8 +1,9 @@
+#!/usr/bin/env node
 import { Command } from "commander";
-import { add } from "@/commads/add";
 import dotenv from "dotenv";
 import { getPackageInfo } from "@/utils";
 import ora from "ora";
+import { add } from "./commands/add";
 
 dotenv.config();
 export const spinner = ora();
@@ -21,3 +22,5 @@ export const main = async () => {
 
   program.parse();
 };
+
+main()

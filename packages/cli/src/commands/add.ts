@@ -2,16 +2,16 @@ import prompts from "prompts";
 import { Command } from "commander";
 import { existsSync, promises as fs } from "fs";
 
-import { getRegistry } from "@/commads/utils/getRegistry";
-import { addOptionsSchema } from "@/commads/validations";
-import { resolveTree } from "@/commads/functions";
+import { getRegistry } from "@/commands/utils/getRegistry";
+import { addOptionsSchema } from "@/commands/validations";
+import { resolveTree } from "@/commands/functions";
 import {
   getPackageManager,
   handleErrors,
   installPackages,
   logger,
 } from "@/utils";
-import { fetchComponents } from "@/commads/functions";
+import { fetchComponents } from "@/commands/functions";
 import { spinner } from "@/index";
 import consola from "consola";
 
@@ -81,7 +81,7 @@ export const add = new Command()
         const folderPath = componentType[0];
         const componentMain = componentType[1];
 
-        const targetPath = `./app/src/components/${folderPath}`;
+        const targetPath = `./src/components/${folderPath}`;
         if (!existsSync(targetPath)) {
           await fs.mkdir(targetPath, { recursive: true });
         }
