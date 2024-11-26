@@ -1,5 +1,11 @@
 # @rccpr/cli
 
+## 1.1.16
+
+### Patch Changes
+
+- use cli without extension
+
 ## 1.1.15
 
 ### Patch Changes
