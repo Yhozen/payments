@@ -5,7 +5,7 @@
   "index": "dist/index.js",
   "main": "dist/index.js",
   "bin": {
-    "cli": "./dist/index.js"
+    "cli": "./cli"
   },
   "exports": "./dist/index.js",
   "files": [
