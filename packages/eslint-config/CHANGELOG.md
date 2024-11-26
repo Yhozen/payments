@@ -1,5 +1,11 @@
 # @rccpr/eslint-config
 
+## 0.1.1
+
+### Patch Changes
+
+- sync packages
+
 ## 0.1.0
 
 ### Minor Changes

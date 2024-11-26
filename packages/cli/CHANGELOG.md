@@ -1,5 +1,11 @@
 # @rccpr/cli
 
+## 1.1.15
+
+### Patch Changes
+
+- sync packages
+
 ## 1.1.14
 
 ### Patch Changes
