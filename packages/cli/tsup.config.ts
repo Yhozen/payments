@@ -8,5 +8,4 @@ export default defineConfig((options) => ({
   sourcemap: true,
   minify: true,
   target: "node14",
-  noExternal: ["zod", "dotenv", "commander", "execa", "ora", "chalk"],
 }));
