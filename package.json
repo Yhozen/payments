@@ -5,6 +5,13 @@
   "index": "dist/index.js",
   "main": "dist/index.js",
   "type": "module",
+  "bin": {
+    "cli": "./dist/index.js"
+  },
+  "exports": "./dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],

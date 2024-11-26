@@ -15,3 +15,4 @@ export const fetchRegistry = async (paths: string[]) => {
     process.exit(0);
   }
 };
+ 
