@@ -1,5 +1,5 @@
-import { registryWithContentSchema } from "@/commads/validations";
-import { fetchRegistry } from "@/commads/utils";
+import { registryWithContentSchema } from "@/commands/validations";
+import { fetchRegistry } from "@/commands/utils";
 import { handleErrors } from "@/utils";
 
 export const getSubDependencies = async (paths: string[]) => {

@@ -1,4 +1,4 @@
-import { Config, registryBaseSchema } from "@/commads/validations";
+import { Config, registryBaseSchema } from "@/commands/validations";
 import { z } from "zod";
 import path from "path";
 

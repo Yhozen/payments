@@ -1,5 +1,5 @@
-import { registrySchema } from "@/commads/validations";
-import { fetchRegistry } from "@/commads/utils";
+import { registrySchema } from "@/commands/validations";
+import { fetchRegistry } from "@/commands/utils";
 import { handleErrors } from "@/utils";
 
 export const getRegistry = async () => {

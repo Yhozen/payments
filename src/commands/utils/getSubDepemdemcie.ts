@@ -1,6 +1,6 @@
 import { handleErrors } from "@/utils";
-import { registrySchema } from "@/commads/validations";
-import { fetchRegistry } from "@/commads/utils";
+import { registrySchema } from "@/commands/validations";
+import { fetchRegistry } from "@/commands/utils";
 
 export const getSubDependency = async (path: string) => {
   try {
