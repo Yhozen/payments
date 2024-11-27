@@ -7,5 +7,4 @@ export default defineConfig((options) => ({
   format: ["esm", "cjs"],
   sourcemap: true,
   minify: true,
-  target: "node14",
 }));
